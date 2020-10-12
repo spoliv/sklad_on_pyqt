@@ -1,0 +1,9 @@
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+DROP TABLE IF EXISTS categories;
+CREATE TABLE categories (category_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, category_name VARCHAR (50) NOT NULL,
+category_description VARCHAR (200) NOT NULL);
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
